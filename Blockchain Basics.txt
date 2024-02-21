@@ -1,0 +1,131 @@
+* Mining: is all about finding a Nounce value which will generate a hash value below a certain target threshold set by bitcoin network.
+
+* A consensus protocol is a process used to achieve agreement between participents of a distributed network.
+
+Data location:
+When you use a reference type, you must explicitly provide the data storage location for the type. The following options can be used to specify the data location where the type is stored:
+
+A Block Header contain
+
+    - Block Number
+    - Version
+    - Timestamp
+    - Previous Hash
+    - Merkle Root
+    - Nonce
+
+* Cryptography:
+
+- Cryptography is a key technology that underpins the security of blockchain systems. It is used to secure the transactions and data on the blockchain, ensuring that they cannot be tampered with or modified without being detected.
+
+- In a blockchain, cryptography is used in several different ways, including the following:
+
+    1. Hashing: Hashing is the process of generating a fixed-size, unique output from an input of any size. In a blockchain, hashing is used to generate a unique "fingerprint" for each block of transactions, known as a block hash. This allows the blockchain to efficiently store and verify the integrity of the transactions.
+
+    2. Digital signatures: Digital signatures are a cryptographic technique that allows the sender of a message to prove that they are the true owner of the message. In a blockchain, digital signatures are used to sign transactions, proving that they are authorized by the owner of the associated cryptocurrency.
+    
+    3. Public-key cryptography: Public-key cryptography is a cryptographic technique that uses a pair of keys, one public and one private, to secure communications. In a blockchain, public-key cryptography is used to generate addresses for users and to enable them to securely receive and send transactions.
+    These are just a few examples of the ways that cryptography is used in blockchain technology. Cryptography is a complex and constantly evolving field, and it is essential for the security and functionality of blockchain systems.
+
+
+* Symmetric Cryptography:
+Alex wants to send some confidential message to Blake. In symmetric cryptography both of them will have a common key, let's call it K1. Alex encrypts the message using the key (K1) and then Bob decrypts the message using the same key (K1). The problem with this method is, if the key is compromised anyone can read the message.
+
+* Asymmetric cryptography or Public Key Cryptography:
+In this method, each node has two keys, one is a public key and the other one is a private key. In the above case, Alex and Blake both will have two keys each. Whenever there's a link between them, they'll share their public keys to each other. The encryption-decryption happens as follows.
+
+KA - Key of A, KB -Key of B, 1- Private Key, 2- Public Key
+
+    1. When Alex sends a message to Blake, It's first encrypted using his private key (KA1)
+    2. Proceeded by Blake's Public Key (KB2)
+    3.Then, Blake decrypts the first layer of encryption using his private key (KB1).
+    4.Blake gets the original message when it's decrypted using A's public key (KA2) in the last step.
+
+Properties of Asymmetric Cryptography :
+
+    - It is not possible to guess the Private key from the Public Key.
+    - However, they are mathematically linked in such a way that anything encrypted using either a Public or Private key can only be decrypted using only these two keys.
+    - Two layers of encryption ensures authenticity of the message. In the last step Blake is sure that the message was from Alex as it could be decrypted using Alex public key only.
+    - End-to-End encryption in WhatsApp works the same way.
+
+
+memory:
+* The location where function arguments are stored
+* Has a lifetime limited to the lifetime of an external function call
+storage:
+* The location where state variables are stored
+* Has a lifetime limited to the contract lifetime
+calldata:
+* The location where function arguments are stored
+* This location is required for parameters of external functions, but can also be used for other variables
+* Has a lifetime limited to the lifetime of an external function call
+
+
+What is a smart contract?
+
+* A smart contract is a program that's stored inside a blockchain. Smart contracts extend blockchain from data to code. They represent an agreement between parties. The agreement is coded, and when an action happens, the code runs and provides a response.
+
+* All of the terms and conditions of the contracts are programmatically defined. A definition specifies the rules, requirements, and rewards for the participants in the blockchain. It also specifies how digital assets are transferred between parties. Each smart contract is assigned a 20-byte address that uniquely identifies it.
+
+* Smart contracts run on their own, send events that trigger state transitions, and call functions. They're perfect for blockchain technology because they allow people who don't know one another to do business in a securely specified way that requires no middleman.
+
+* Smart contracts are most commonly used with Ethereum. Ethereum is the world's first programmable blockchain. It allows smart contracts to be defined to help facilitate the transfer of digital assets, like ether.
+
+* The language you'll use to write contracts is Solidity. Solidity is Turing-complete, which means that you can write complicated contracts in a clearly defined and coded way.
+
+* Because every state transition is logged and immutable, you should thoroughly test the contract before you release it into a production environment. Bug fixes can be costly and can even cause critical system damage.
+
+Smart contracts have these key properties and advantages:
+
+* Transparency: Blockchain users can read smart contracts and can access them by using APIs.
+
+* Immutability: Smart contract execution creates logs that can't be changed.
+
+* Distribution: The output of the contract is validated and verified by nodes on the network. Contract states can be publicly visible. In some cases, even "private" variables are visible.
+
+Use cases:
+
+* Smart contracts can benefit many industries and processes. Consider the following use cases.
+
+* Insurance: When certain events occur, smart contracts automatically trigger a claim that simplifies and streamlines the claims process. Then, to determine the amount of compensation that users receive, claim details can be recorded on the blockchain. This functionality can reduce processing times and human errors.
+
+* Voting: Smart contracts can help make voting automatic and transparent. Each contract serves as one ballot, which represents a voter's identity. Because a blockchain is immutable, meaning that it can't be changed, votes can't be tampered with.
+
+* Supply chains: As items move through the supply chain, smart contracts can record ownership and can confirm who's responsible for a product at any given time. At any stage, the smart contract can be used to find out exactly where the products should be. If any party in the supply chain fails to deliver on time, then every other party knows where the problem happened.
+
+* Record keeping: Many industries can use smart contracts to improve the speed and security of record keeping. Blockchain technology can be used to digitize records and to securely encrypt and store them. Plus, access can be gated so that only allowed individuals can access the records.
+
+* Property ownership: Smart contracts can record who owns property. They're a fast and cost-efficient way to record ownership. Smart contracts can also help facilitate the transfer of ownership in a timely and secure way.
+
+Token standards are defined in the Ethereum Request for Comments (ERCs). Although new standards are continuously being proposed and accepted, standards for four primary ERC types have been widely adopted:
+
+ERC20
+ERC721
+ERC777
+ERC1155
+Let's explore each type of token. We'll take a moment to understand what makes each one significant and unique.
+
+ERC20:
+* The ERC20 token is the most widely known and used. ERC20 is the technical standard that's used for smart contracts on the Ethereum blockchain to implement tokens. ERC20 has a simple interface for basic tokens.
+
+You can keep track of fungible tokens by using ERC20 token contracts. Any one ERC20 token is equal to any other token. Also, ERC20 tokens don't have any associated special rights or behaviors, which make the tokens useful for things like staking, currency exchange, and voting rights.
+
+ERC721
+* ERC721 is the top solution for non-fungible tokens (NFTs). Like all other tokens, NFTs represent ownership both of virtual and physical assets. These assets are likely to include:
+
+* Collectible items, like antiques, cards, or art
+* Physical assets, like houses or cars
+* Negative-value assets, like loans
+* Each token is unique and has ownership and status that must be tracked.
+
+While similar, the ERC721 token and ERC20 token differ in complexity. The ERC721 token is more complex. Also, with the ERC721 token, each function has an argument to specify the token ID that uniquely identifies the token being used in the smart contract.
+
+ERC777:
+* ERC777 is a richer standard that is used for fungible tokens. The standard can be used for new use cases and to build on learnings from previous token standards. It's backward-compatible with ERC20, which means you can interact with ERC777 tokens as if they're ERC20 tokens. You can use ERC777 tokens for interactions that are more complex trades.
+
+ERC1155: 
+* ERC1155 is a standard that's used to manage multiple types of tokens. A contract can represent multiple fungible and non-fungible tokens.
+
+* ERC1155 draws on ideas from ERC20, ERC721, and ERC777.
+
+* The design of the ERC1155 token type allows for massive gas savings, for a couple reasons. (In Ethereum, gas refers to a fee or pricing value charged to execute transactions.) First, you can use this token contract for multiple tokens, which means fewer deployments with less complexity. It also has batched operations, so a single function call can be simpler and less gas-intensive.
